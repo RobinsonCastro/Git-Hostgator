@@ -2,6 +2,7 @@
 
 
 $ ssh -p 2222 user-name@your-domain.com
+
 $ Enter your password: **********
 
 
