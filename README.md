@@ -21,12 +21,12 @@ If ~/.ssh/authorized_keys does not exist on hostgator, then create it by running
 
 $ touch ~/.ssh/authorized_keys
 
-TO CLONE FROM HOSTGATOR TO PC
+# TO CLONE FROM HOSTGATOR TO PC
 
 $ git clone ssh://user-name@your-domain.com:2222/~/public_html/path..
 
 
-SET UP HOSTGATOR SERVER TO ACCEPT PUSHES
+# SET UP HOSTGATOR SERVER TO ACCEPT PUSHES
 
 $ mkdir REPOSITORY_NAME
 
