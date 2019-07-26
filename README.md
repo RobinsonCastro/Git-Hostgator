@@ -12,9 +12,13 @@ have the~/.ssh/id_rsa.pub file on your computer. If you do skip to the second li
 
 
 $ ssh-keygen -t rsa
+
 $ scp -p 2222 ~/.ssh/id_rsa.pub user-name@your-domain.com:~/.ssh/authorized_keys
+
 $ ssh -p 2222 user-name@your-domain.com 'chmod 600 ~/.ssh/authorized_keys'
+
 If ~/.ssh/authorized_keys does not exist on hostgator, then create it by running the command below.
+
 $ touch ~/.ssh/authorized_keys
 
 TO CLONE FROM HOSTGATOR TO PC
@@ -25,23 +29,33 @@ $ git clone ssh://user-name@your-domain.com:2222/~/public_html/path..
 SET UP HOSTGATOR SERVER TO ACCEPT PUSHES
 
 $ mkdir REPOSITORY_NAME
+
 $ cd REPOSITORY_NAME
+
 $ git init
+
 Next you need to set a config option in your hostgator repo to accept pushes into this working directory. In this same directory run:
+
 $ git config receive.denyCurrentBranch ignore
 
 
 
 SEARCH FOR post-receive file into .git/hooks/
+
 IF IT DOESN'T EXIST, CREATE IT BY RUNNING 'nano post-receive' AS FOLLOWING:
 
 $ cd .git/hooks/
+
 $ nano post-receive
+
 Then add the following to the post_receive file, exit and save.
 #!/bin/sh
+
 GIT_WORK_TREE=../ git checkout -f
 
+
 Now you want to make it executable. Run the following command
+
 $ chmod +x ~/public_html/REPOSITORY_NAME/.git/hooks/post-receive
 
 
