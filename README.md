@@ -8,12 +8,12 @@ $ Enter your password: **********
 
 Get your public key into Hostgator. Your public key is located at ~/.ssh/id_rsa.pub (on your workstation). If you dont have 
 ~/.ssh/id_rsa.pub on your workstation, run ssh-keygen in your console and hit enter all the way through. At the end of that, you will 
-have the~/.ssh/id_rsa.pub file on your computer. If you do skip to the second line below to copy the key to hostgator.
+have the ~/.ssh/id_rsa.pub file on your computer. If you do skip to the second line below to copy the key to hostgator.
 
 
 $ ssh-keygen -t rsa
 
-$ scp -p 2222 ~/.ssh/id_rsa.pub user-name@your-domain.com:~/.ssh/authorized_keys
+$ scp -p 2222 ~ /.ssh/id_rsa.pub user-name@your-domain.com:~/.ssh/authorized_keys   (tira o espaço depois do ~)
 
 $ ssh -p 2222 user-name@your-domain.com 'chmod 600 ~/.ssh/authorized_keys'
 
