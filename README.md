@@ -13,7 +13,7 @@ have the ~/.ssh/id_rsa.pub file on your computer. If you do skip to the second l
 
 $ ssh-keygen -t rsa
 
-$ scp -p 2222 ~ /.ssh/id_rsa.pub user-name@your-domain.com:~/.ssh/authorized_keys   (tira o espaço depois do ~)
+$ scp -p 2222 ~ /.ssh/id_rsa.pub user-name@your-domain.com:~/.ssh/authorized_keys   (ps. delete space after ~)
 
 $ ssh -p 2222 user-name@your-domain.com 'chmod 600 ~/.ssh/authorized_keys'
 
