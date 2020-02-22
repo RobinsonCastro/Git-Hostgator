@@ -1,5 +1,6 @@
 # Git-Hostgator
 
+Access Hostgator server via SSH
 
 $ ssh -p 2222 user-name@your-domain.com
 
