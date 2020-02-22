@@ -50,6 +50,7 @@ $ cd .git/hooks/
 $ nano post-receive
 
 Then add the following to the post_receive file, exit and save.
+
 #!/bin/sh
 
 GIT_WORK_TREE=../ git checkout -f
