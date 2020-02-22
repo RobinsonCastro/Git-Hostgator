@@ -49,7 +49,7 @@ $ cd .git/hooks/
 
 $ nano post-receive
 
-Then add the following to the post_receive file, exit and save.
+Then add the following two code lines to the post_receive file, exit and save.
 
 #!/bin/sh
 
