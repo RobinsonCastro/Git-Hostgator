@@ -50,11 +50,10 @@ $ cd .git/hooks/
 $ nano post-receive
 
 Then add the following two code lines to the post_receive file, exit and save.
-
+```
 #!/bin/sh
-
 GIT_WORK_TREE=../ git checkout -f
-
+```
 
 Now you want to make it executable. Run the following command
 
